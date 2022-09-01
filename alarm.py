@@ -17,6 +17,7 @@ from plyer import notification
 # When notification is clicked, bring to a popup message
 # Instead of alarm, change to be repeated after a set amount of hours or occur at random
 # Option to stop notifications for the rest of the day
+# Running in the background
 
 # Create Object
 root = Tk()
