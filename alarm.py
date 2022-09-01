@@ -12,7 +12,7 @@ from plyer import notification
 # Current Clock Time (8/9/2022)
 # Notification System (8/9/2022)
 # AM/PM System (8/25/2022)
-# Test
+
 # PLANNED IMPLEMENTATIONS
 # When notification is clicked, bring to a popup message
 # Instead of alarm, change to be repeated after a set amount of hours or occur at random
