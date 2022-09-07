@@ -5,6 +5,7 @@ import time
 import winsound
 from threading import *
 from plyer import notification
+import random
 
 # ALL IMPLEMENTATIONS BY CALVIN
 # 5-second ping system after alarm (8/8/2022) - OMITTED
@@ -12,10 +13,10 @@ from plyer import notification
 # Current Clock Time (8/9/2022)
 # Notification System (8/9/2022)
 # AM/PM System (8/25/2022)
+# Random Alarm Option (9/7/2022)
 
 # PLANNED IMPLEMENTATIONS
 # When notification is clicked, bring to a popup message
-# Instead of alarm, change to be repeated after a set amount of hours or occur at random
 # Option to stop notifications for the rest of the day
 # Running in the background
 
@@ -50,9 +51,27 @@ def clock():
 
 def alarm():
     # Infinite Loop
+
+    # Grabs a randomized time (optimized so that no time between 9 PM - 12 PM is allowed)
+    hours_1 = ('00', '01', '02', '03', '04', '05', '06',
+         '07', '08', '09', '10', '11', '12', '13', '14',
+         '15', '16', '17', '18', '19', '20',
+    )
+    hr = random.choice(hours_1)
+    ms = random.choice(minutes)
+    ss = random.choice(seconds)
+    current_time1 = datetime.datetime.now().strftime("%H:%M:%S")
+
+    # Confirms that hour time is after the current hour time
+    while int(hr) <= int(current_time1[:2]):
+        print(int(hr))
+        hr = random.choice(hours_1)
+        
     while True:
         # Set Alarm
-        if day.get() == 'PM' and hour.get() != '12':
+        if randoming.get() == 'Random':
+            set_alarm_time = f"{hr}:{ms}:{ss}"
+        elif day.get() == 'PM' and hour.get() != '12':
             set_alarm_time = f"{str(int(hour.get())+12)}:{minute.get()}:{second.get()}"
         elif day.get() == 'AM' and hour.get() == '12':
             set_alarm_time = f"{str(int(hour.get())-12)}:{minute.get()}:{second.get()}"
@@ -125,9 +144,14 @@ days = ('AM', 'PM')
 day.set(days[0])
 d = OptionMenu(frame, day, *days)
 d.pack(side=LEFT)
- 
+
+randoming = StringVar(root)
+randoms = ('Alarm', 'Random')
+randoming.set(randoms[0])
+r = OptionMenu(frame, randoming, *randoms)
+r.pack(side=LEFT)
+
 Button(root,text="Set Alarm",font=("Helvetica 15"),command=Threading).pack(pady=20)
- 
 # Execute Tkinter
 clock()
 root.mainloop()
