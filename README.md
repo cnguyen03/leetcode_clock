@@ -4,7 +4,7 @@
 #### 1. Download alarm.py and save it onto your local machine. (Notification icon may be optionally downlaoded, but not required)
 #### 2. Open terminal and move to the directory of which alarm.py is located. Run python alarm.py
   - You may also open alarm.py on an IDE and run the program through that
-#### 3. Set alarm of choice and select "Set Time". You now have an alarm to do a leetcode problemfor that time! A windows notification will remind of your set alarm time.
+#### 3. Set alarm of choice and select "Set Time". You now have an alarm to do a leetcode problem for that time! A windows notification will remind of your set alarm time.
 ##### Languages: Python
 ##### Tools: Tkinter
 ##### Collaborators: Calvin Nguyen
