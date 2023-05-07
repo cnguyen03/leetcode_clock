@@ -15,11 +15,6 @@ import random
 # AM/PM System (8/25/2022)
 # Random Alarm Option (9/7/2022)
 
-# PLANNED IMPLEMENTATIONS
-# When notification is clicked, bring to a popup message
-# Option to stop notifications for the rest of the day
-# Running in the background
-
 # Create Object
 root = Tk()
  
