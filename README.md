@@ -7,6 +7,7 @@
 #### 3. Set alarm of choice and select "Set Time". You now have an alarm for that time! A windows notification will remind of your set alarm time.
 ##### Languages: Python
 ##### Tools: Tkinter
+##### Collaborators: Calvin Nguyen
 ##### Functionality:
 ##### - 12-hour clock that tells the current time
 ##### - Set an alarm for any time of the day. At the time of the set alarm, a windows notification is sent to the desktop
